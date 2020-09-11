@@ -1,27 +1,27 @@
 
 <p align="center">	
-<a href="https://www.linkedin.com/in/ediberto-b-oliveira-872926178/">
-  <img alt="Ediberto Oliveira" src="https://img.shields.io/badge/Author-Ediberto%20Oliveira-red" />
+<a href="https://www.linkedin.com/in/renata-novais/">
+  <img alt="Renata Novas" src="https://img.shields.io/badge/Author-Renata%20Novas-blue" />
   </a>
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/as/fg-hj?color=red">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/RenataNovais/react-painter?color=blue">
 
-  <a aria-label="Completed" href="https://as.github.io/fg-hj">
-    <img src="https://img.shields.io/badge/Project-fg--hj-red"></img>
+  <a aria-label="Completed" href="https://RenataNovais.github.io/react-painter">
+    <img src="https://img.shields.io/badge/Project-react--painter-blue"></img>
   </a>
-  <a href="https://github.com/as/fg-hj/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/as/fg-hj?color=red">
+  <a href="https://github.com/RenataNovais/react-painter/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/RenataNovais/react-painter?color=blue">
   </a> 
 
-  <a href="https://github.com/as/fg-hj/master/LICENSE">
-    <img alt="License" src="https://img.shields.io/badge/license-MIT-red">
+  <a href="https://github.com/RenataNovais/react-painter/master/LICENSE">
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-blue">
   </a>
   
-   <a href="https://github.com/as/fg-hj/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/as/fg-hj?color=red">
+   <a href="https://github.com/RenataNovais/react-painter/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/RenataNovais/react-painter?color=blue">
   </a>
 </p>
 
-# fg-hj
+# react-painter
 
 ### Web Screenshot
 
@@ -70,13 +70,13 @@ This project was made using the follow technologies:
 ### :construction_worker: How to run
 
 ### :bug: Issues
-Feel free to **file a new issue** with a respective title and description on the the [fg-hj](https://github.com/as/fg-hj/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**!
+Feel free to **file a new issue** with a respective title and description on the the [react-painter](https://github.com/RenataNovais/react-painter/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**!
 
 ### :closed_book: License
 Released in 2020 :closed_book: License
 
-Made with love by [Ediberto Oliveira](https://github.com/as/) 🚀.
-This project is under the [MIT license](https://github.com/as/fg-hj/master/LICENSE).
+Made with love by [Renata Novas](https://github.com/RenataNovais/) 🚀.
+This project is under the [MIT license](https://github.com/RenataNovais/react-painter/master/LICENSE).
 
 Give a ⭐️ if this project helped you!
 

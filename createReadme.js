@@ -6,30 +6,36 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-let userGithub, repositoryGithub;
+let fullName, repositoryGithub;
+let social = 'https://www.linkedin.com/in/renata-novais/';
+let userGithub = 'https://github.com/RenataNovais';
+let color = 'blue';
+
 
 //Edite template README.md
-function editMD(user, repository){
+function editMD(fullName, github, repository, social, color){
+  let userGithub = github.replace('https://github.com/', '');
+
   return `
 <p align="center">	
-<a href="https://www.linkedin.com/in/ediberto-b-oliveira-872926178/">
-  <img alt="Ediberto Oliveira" src="https://img.shields.io/badge/Author-Ediberto%20Oliveira-red" />
+<a href="${social}">
+  <img alt="${fullName}" src="https://img.shields.io/badge/Author-${fullName.replace(' ', '%20')}-${color}" />
   </a>
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/${user}/${repository}?color=red">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/${userGithub}/${repository}?color=${color}">
 
-  <a aria-label="Completed" href="https://${user}.github.io/${repository}">
-    <img src="https://img.shields.io/badge/Project-${repository.replace('-', '--')}-red"></img>
+  <a aria-label="Completed" href="https://${userGithub}.github.io/${repository}">
+    <img src="https://img.shields.io/badge/Project-${repository.replace('-', '--')}-${color}"></img>
   </a>
-  <a href="https://github.com/${user}/${repository}/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/${user}/${repository}?color=red">
+  <a href="https://github.com/${userGithub}/${repository}/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/${userGithub}/${repository}?color=${color}">
   </a> 
 
-  <a href="https://github.com/${user}/${repository}/master/LICENSE">
-    <img alt="License" src="https://img.shields.io/badge/license-MIT-red">
+  <a href="https://github.com/${userGithub}/${repository}/master/LICENSE">
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-${color}">
   </a>
   
-   <a href="https://github.com/${user}/${repository}/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/${user}/${repository}?color=red">
+   <a href="https://github.com/${userGithub}/${repository}/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/${userGithub}/${repository}?color=${color}">
   </a>
 </p>
 
@@ -82,13 +88,13 @@ This project was made using the follow technologies:
 ### :construction_worker: How to run
 
 ### :bug: Issues
-Feel free to **file a new issue** with a respective title and description on the the [${repository}](https://github.com/${user}/${repository}/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**!
+Feel free to **file a new issue** with a respective title and description on the the [${repository}](https://github.com/${userGithub}/${repository}/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**!
 
 ### :closed_book: License
 Released in 2020 :closed_book: License
 
-Made with love by [Ediberto Oliveira](https://github.com/${user}/) 🚀.
-This project is under the [MIT license](https://github.com/${user}/${repository}/master/LICENSE).
+Made with love by [${fullName}](https://github.com/${userGithub}/) 🚀.
+This project is under the [MIT license](https://github.com/${userGithub}/${repository}/master/LICENSE).
 
 Give a ⭐️ if this project helped you!
 
@@ -97,13 +103,13 @@ Give a ⭐️ if this project helped you!
 
 //Questionario de perguntas
 rl.question("Qual o perfil do GitHub? ", function(name) {
-  userGithub = name;
+  fullName = name;
     rl.question("Qual o nome  do repositorio? ", function(repository) {
       repositoryGithub = repository;
         console.log(`Repositorio ${repository}, do usuario ${name}`);
 
         //Salve arquivo README.md na pasta local
-        fs.writeFile("README.md", editMD(userGithub, repositoryGithub), function(erro) {
+        fs.writeFile("README.md", editMD(fullName, userGithub, repositoryGithub, social, color), function(erro) {
 
           if(erro) {
               throw erro;
