@@ -10,10 +10,12 @@ let fullName, repositoryGithub;
 let social = 'https://www.linkedin.com/in/renata-novais/';
 let userGithub = 'https://github.com/RenataNovais';
 let color = 'blue';
+let description = 'created for study using as basis the lessons of the <a href="https://github.com/maykbrito" target="_blink">Maik Brito</a> of <a href="https://github.com/Rocketseat" target="_blink">Rocketseat</a>. I made my modifications, because I use it constantly to cut images quickly.';
+let 
 
 
 //Edite template README.md
-function editMD(fullName, github, repository, social, color){
+function editMD(fullName, github, repository, social, color, description){
   let userGithub = github.replace('https://github.com/', '');
 
   return `
@@ -49,8 +51,7 @@ function editMD(fullName, github, repository, social, color){
    <img src="./.github/Screenshot_3.png" width="250px" height="400px">
 </div>
 
-> :rocket: created for study using as basis the lessons of the <a href="https://github.com/maykbrito" target="_blink">Maik Brito</a> of <a href="https://github.com/Rocketseat" target="_blink">Rocketseat</a>. I made my modifications, because I use it constantly to cut images quickly.
-
+> :rocket: ${description}
 ### :pushpin: Table of Contents
 
 * [Technologies](#computer-technologies)
@@ -109,7 +110,7 @@ rl.question("Qual o perfil do GitHub? ", function(name) {
         console.log(`Repositorio ${repository}, do usuario ${name}`);
 
         //Salve arquivo README.md na pasta local
-        fs.writeFile("README.md", editMD(fullName, userGithub, repositoryGithub, social, color), function(erro) {
+        fs.writeFile("README.md", editMD(fullName, userGithub, repositoryGithub, social, color, description), function(erro) {
 
           if(erro) {
               throw erro;
