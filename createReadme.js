@@ -7,15 +7,31 @@ const rl = readline.createInterface({
 });
 
 let fullName, repositoryGithub;
-let social = 'https://www.linkedin.com/in/renata-novais/';
-let userGithub = 'https://github.com/RenataNovais';
+let social = 'https://www.linkedin.com/in/ediberto-b-oliveira-872926178/';
+let userGithub = 'https://github.com/edibertooliveira';
 let color = 'blue';
+
 let description = 'created for study using as basis the lessons of the <a href="https://github.com/maykbrito" target="_blink">Maik Brito</a> of <a href="https://github.com/Rocketseat" target="_blink">Rocketseat</a>. I made my modifications, because I use it constantly to cut images quickly.';
-let 
+
+let features = 'To speed up image editing without using more elaborate applications';
+let technologies = 'HTML, CSS, JavaScript, SCSS';
+let Interesting = 'Create a new instance of HTMLImageElement Image()., Working with objects in events., HTML Canvas API, Cropping image in Canvas API., Handling multiple events in an element., Download image modification';
+
+let status = 'complete';
+
+//Transforma de String para array e retorna toda a extensão do array como lista
+function transformStrngArray(string){
+  let array = string.split(', ');
+  let result = ''
+  array.forEach(element => {
+    result += `<li>${element}</li><br/>`;
+  });
+  return result;
+}
 
 
 //Edite template README.md
-function editMD(fullName, github, repository, social, color, description){
+function editMD(fullName, github, repository, social, color, description, features, technologies, Interesting, status){
   let userGithub = github.replace('https://github.com/', '');
 
   return `
@@ -64,27 +80,20 @@ function editMD(fullName, github, repository, social, color, description){
 ### :computer: Technologies
 This project was made using the follow technologies:
 <ul>
-  <li><a href="https://developer.mozilla.org/">HTML5</a></li>
-  <li><a href="https://css-tricks.com/">CSS3</a></li>
-  <li><a href="https://www.javascript.com/">Javascript</a></li>
+  ${transformStrngArray(technologies)}
 </ul>
 
 ### :rocket: Features
 
-* To speed up image editing without using more elaborate applications
+* ${features};
 
 ### Covered in this project
 
 <ul>
-  <li>Create a new instance of HTMLImageElement Image().</li>
-  <li>Working with objects in events.</li>
-  <li>HTML Canvas API</li>
-  <li>Cropping image in Canvas API.</li>
-  <li>Handling multiple events in an element.</li>
-  <li>Download image modification</li>
+${transformStrngArray(Interesting)}
 </ul>
 
-> Status: Completo.
+> Status: ${status}.
 
 ### :construction_worker: How to run
 
@@ -103,14 +112,14 @@ Give a ⭐️ if this project helped you!
 }
 
 //Questionario de perguntas
-rl.question("Qual o perfil do GitHub? ", function(name) {
+rl.question("Author?: ", function(name) {
   fullName = name;
-    rl.question("Qual o nome  do repositorio? ", function(repository) {
+    rl.question("Projeto?: ", function(repository) {
       repositoryGithub = repository;
         console.log(`Repositorio ${repository}, do usuario ${name}`);
 
         //Salve arquivo README.md na pasta local
-        fs.writeFile("README.md", editMD(fullName, userGithub, repositoryGithub, social, color, description), function(erro) {
+        fs.writeFile("./update/README.md", editMD(fullName, userGithub, repositoryGithub, social, color, description, features, technologies, Interesting, status), function(erro) {
 
           if(erro) {
               throw erro;
