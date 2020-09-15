@@ -52,7 +52,7 @@ Este projeto foi feito usando as seguintes tecnologias:
    <li>Criado para padronizar projetos em grande escala, com um estilo moderno e avançado que deixa o README.md interesante de se ver.</li>
 </ul>
 
-### :Covered: Abordados neste projeto
+### Abordados neste projeto
 <ul>
 <li>Trabalhar com node.</li><li>Usando readline e fs.</li><li>Formular um template.</li><li>Uso de metodos split e replace.</li>
 </ul>
