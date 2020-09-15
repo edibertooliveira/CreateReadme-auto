@@ -65,10 +65,10 @@ Este projeto foi feito usando as seguintes tecnologias:
 * Abra o terminal do seu computador. Se estiver no Windows, pode ser o Prompt de Comando ou PowerShell.  
 * Altere o diretório de trabalho atual para o local em que deseja ter o código do módulo salvo no seu computador.
 ```
-* Faça um clone desse repositório rodando:
+# Faça um clone desse repositório rodando:
 git clone https://github.com/edibertooliveira/createReadme-auto.git
 
-* Entre na pasta rodando pelo terminal: 
+# Entre na pasta rodando pelo terminal: 
 cd createReadme-auto;
 ```
 ### :bug: Issues
