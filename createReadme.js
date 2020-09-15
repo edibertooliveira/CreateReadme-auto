@@ -11,20 +11,20 @@ let social = 'https://www.linkedin.com/in/ediberto-b-oliveira-872926178/';
 let userGithub = 'https://github.com/edibertooliveira';
 let color = 'blue';
 
-let description = 'created for study using as basis the lessons of the <a href="https://github.com/maykbrito" target="_blink">Maik Brito</a> of <a href="https://github.com/Rocketseat" target="_blink">Rocketseat</a>. I made my modifications, because I use it constantly to cut images quickly.';
+let description = 'Criando meus proprios modelos de README.md.';
 
-let features = 'To speed up image editing without using more elaborate applications';
-let technologies = 'HTML, CSS, JavaScript, SCSS';
-let Interesting = 'Create a new instance of HTMLImageElement Image()., Working with objects in events., HTML Canvas API, Cropping image in Canvas API., Handling multiple events in an element., Download image modification';
+let features = 'Criado para padronizar projetos em grande escala, com um estilo moderno e avançado que deixa o README.md interesante de se ver.';
+let technologies = 'HTML - CSS - JavaScript';
+let Interesting = 'Trabalhar com node. - Usando readline e fs. - Formular um template. - Uso de metodos split e replace.';
 
-let status = 'complete';
+let status = 'completo';
 
 //Transforma de String para array e retorna toda a extensão do array como lista
 function transformStrngArray(string){
-  let array = string.split(', ');
+  let array = string.split(' - ');
   let result = ''
   array.forEach(element => {
-    result += `<li>${element}</li><br/>`;
+    result += `<li>${element}</li>`;
   });
   return result;
 }
@@ -68,45 +68,50 @@ function editMD(fullName, github, repository, social, color, description, featur
 </div>
 
 > :rocket: ${description}
-### :pushpin: Table of Contents
+### :pushpin: Índice
 
-* [Technologies](#computer-technologies)
-* [Features](#rocket-features)
-* [Interesting things covered in this project](#Covered-in-this-project)
-* [How to Run](#construction_worker-how-to-run)
-* [Found a bug? Missing a specific feature?](#bug-issues)
-* [License](#closed_book-license)
+* [Tecnologias](#computer-Tecnologias)
+* [Como pode ajudar?](#rocket-Recursos)
+* [Coisas interessantes abordadas neste projeto](#Covered-Abordados-neste-projeto)
+* [Como executar](#construction_worker-Como-executar)
+* [Encontrou um bug? Faltando um recurso específico?](#bug-issues)
+* [Licença](#closed_book-licença)
 
-### :computer: Technologies
-This project was made using the follow technologies:
+### :computer: Tecnologias
+Este projeto foi feito usando as seguintes tecnologias:
 <ul>
   ${transformStrngArray(technologies)}
 </ul>
 
-### :rocket: Features
+### :rocket: Recursos
+<ul>
+   ${transformStrngArray(features)}
+</ul>
 
-* ${features};
-
-### Covered in this project
-
+### :Covered: Abordados neste projeto
 <ul>
 ${transformStrngArray(Interesting)}
 </ul>
 
 > Status: ${status}.
 
-### :construction_worker: How to run
+### :construction_worker: Como executar
+
+> ps: É necessario ter o nodejs e git instalado.
+* Abra o terminal do seu computador. Se estiver no Windows, pode ser o Prompt de Comando ou PowerShell.
+* Altere o diretório de trabalho atual para o local em que deseja ter o código do módulo salvo no seu computador. 
+* Faça um clone desse repositório rodando: git clone https://github.com/${userGithub}/${repository}.git; 
+* Entre na pasta rodando pelo terminal: cd ${repository};
 
 ### :bug: Issues
-Feel free to **file a new issue** with a respective title and description on the the [${repository}](https://github.com/${userGithub}/${repository}/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**!
+Sinta-se à vontade para **registrar um novo problema** com o respectivo título e descrição no [${repository}](https://github.com/${userGithub}/${repository}/issues) repositório. Se você já encontrou uma solução para o seu problema, **adoraria revisar sua pull request**!
 
-### :closed_book: License
-Released in 2020 :closed_book: License
+### :closed_book: Licença
+Released in 2020 :closed_book: Licença
 
-Made with love by [${fullName}](https://github.com/${userGithub}/) 🚀.
-This project is under the [MIT license](https://github.com/${userGithub}/${repository}/master/LICENSE).
+Este projeto está sob o [MIT license](https://github.com/${userGithub}/${repository}/master/LICENSE).
 
-Give a ⭐️ if this project helped you!
+Feito com muito amor by [${fullName}](https://github.com/${userGithub}/) 🚀.
 
 `;
 }
