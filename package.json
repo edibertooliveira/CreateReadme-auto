@@ -1,0 +1,19 @@
+{
+  "name": "createreadme-auto",
+  "version": "1.0.0",
+  "description": "Creating my own README.md templates",
+  "main": "createReadme.js",
+  "scripts": {
+    "start": "node createReadme.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edibertooliveira/CreateReadme-auto.git"
+  },
+  "author": "Ediberto Oliveira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edibertooliveira/CreateReadme-auto/issues"
+  },
+  "homepage": "https://github.com/edibertooliveira/CreateReadme-auto#readme"
+}
