@@ -44,7 +44,7 @@
 ### :computer: Tecnologias
 Este projeto foi feito usando as seguintes tecnologias:
 <ul>
-  <li>HTML</li><li>CSS</li><li>JavaScript</li>
+  <li>NodeJS</li><li>JavaScript</li>
 </ul>
 
 ### :rocket: Recursos
@@ -54,7 +54,7 @@ Este projeto foi feito usando as seguintes tecnologias:
 
 ### Abordados neste projeto
 <ul>
-<li>Trabalhar com node.</li><li>Usando readline e fs.</li><li>Formular um template.</li><li>Uso de metodos split e replace.</li>
+<li>Trabalhar com node.</li><li>Usando readline e fs.</li><li>Edição de um template.</li><li>Uso de metodos split e replace.</li>
 </ul>
 
 > Status: in progress.
@@ -70,6 +70,9 @@ git clone https://github.com/edibertooliveira/createReadme-auto.git
 
 # Entre na pasta rodando pelo terminal: 
 cd createReadme-auto;
+
+# execute pelo terminal: 
+npm start;
 ```
 ### :bug: Issues
 Sinta-se à vontade para **registrar um novo problema** com o respectivo título e descrição no [createReadme-auto](https://github.com/edibertooliveira/createReadme-auto/issues) repositório. Se você já encontrou uma solução para o seu problema, **adoraria revisar sua pull request**!
